@@ -1,0 +1,14 @@
+Start
+after reading the code provided I started by creating my arrays
+using the code that Trent gave us during class
+completed arrays using Charcode sheet for upper and lower case letters 
+created an empty password array to then fill later with confirmed criteria 
+created the starting function
+insert number between 8 and 128
+checks to see if number is valid 
+Please input valid number
+prompts the user to choose Upper case, lower case, number and special characters
+fills in empty array with criteria 
+checks the length of password picks at random from arrays selected 
+returns password to display 
+end

@@ -16,23 +16,24 @@ var confirmNumber;
 var confirmSpecial;
 var confirmUpper;
 var confirmLower;
-//Code that trent gave us with edits
+var confirmNothing;
+//Trents code as a base
 // counts up from 97 on the charsheet until it reaches 26
 let letters = [...Array(26).keys()].map(i => String.fromCharCode(i + 97)); 
 console.log(letters);
 
 let upperLetters = [...Array(26).keys()].map(i => String.fromCharCode(i + 65));
 console.log(upperLetters);
-
+//using the charcode sheet to add Upper and Lower case letters to array
 let number = [1,2,3,4,5,6,7,8,9,0];
 console.log(number);
 
 let special = ['!','@','#','&','%'];
+
 console.log(special); 
 
-let passwordArray = [
-  
-];
+let passwordArray = [ ]; //confirming criteria will add them to array
+
 //Trents code ends
 function generatePassword() {
   enter = parseInt(prompt("How many characters between 8 and 128?"));
@@ -55,26 +56,27 @@ if (confirmNumber){
   passwordArray=passwordArray.concat(number)
 }
 confirmSpecial=confirm("would you like special characters?"); 
-if (confirmLower){
+if (confirmSpecial){
   passwordArray=passwordArray.concat(special)
 }
 //Array choice, turn off array numbers   
 //Trents Code starts again
+//reads length of new array
 let passwordLength = enter;
 console.log(passwordArray);
 let password = '';
 for(let i =0; i <= passwordLength; i++){
     let arrayNum = Math.floor(Math.random() * passwordArray.length); //gives us random number then math.floor rounds it
-    console.log(`Array Choice ${arrayNum} char choice`);
+    console.log(`Array Choice ${arrayNum} char choice`); //for testing array choices
     let passwordChar = passwordArray [arrayNum];
     password = password + passwordChar;
 }
 //Trents code ends
 console.log(`Password is ${password}`);
-return password;
+return password; //returns password to passwordtext
 }
 // Create functions for random letters
 // Found javascript browser charset on forum: http://www.net-comber.com/charset.html
 // Create promt to set password prefrences with if statements
 // Randomize 
-//print
+// Print
